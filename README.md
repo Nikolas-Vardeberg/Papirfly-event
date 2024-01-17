@@ -3,7 +3,7 @@ Skole project for papirfly.imkatta.no med phpmyadmin html, css &amp; javascript
 
 # Arrangementsside for Skoleprosjekt
 
-Dette prosjektet er en del av vår skoleoppgave der vi arrangerte et spennende arrangement, og denne GitHub-repositorien inneholder koden for nettstedet jeg utviklet for å administrere arrangementet.
+Dette prosjektet er en del av vår skoleoppgave der vi arrangerte et spennende arrangement, og denne GitHub-repositorien inneholder koden for nettstedet jeg utviklet for å administrere arrangementet, samt gi brukeren en lett opplevelse for å melde seg på arragementet
 
 ## Teknologier og verktøy brukt:
 - **Frontend**: Vi har bygget nettstedet ved hjelp av HTML, CSS og JavaScript for en responsiv og brukervennlig opplevelse.
