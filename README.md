@@ -15,3 +15,4 @@ Dette prosjektet er en del av vår skoleoppgave der vi arrangerte et spennende a
 - **Administrasjon av deltakere**: Vi har implementert funksjoner for å administrere deltakerlisten, inkludert tillegg, sletting og oppdatering av deltakerinformasjon.
 - **Arrangementinformasjon**: Nettstedet viser viktig informasjon om arrangementet, inkludert dato, tid, sted og annen relevant informasjon.
 
+![image](https://github.com/Nikolas-Vardeberg/Papirfly-event/assets/156543836/7c453a21-8dbc-4328-a086-c52fe13513a4)
