@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Papir-Plane-Event &#9992;" data-no="Papirfly-Event &#9992;">Papirfly-Event</title>
+    <link rel="icon" href="favicon.png">
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12514bfa67.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <div class="loader"><img src="https://media3.giphy.com/media/IqgySmxEgP0rs40ZMB/giphy.gif" alt="Loading..."></div>
+
+</head>
+<body>
+<header class="l-header" id="header">
+  <nav class="nav bd-grid">
+      <div>
+          <a href="#" class="nav__logo" data-en="Paper-plane Event" data-no="Papirfly Midtime" data-ru="&#1041;&#1091;&#1084;&#1072;&#1078;&#1085;&#1099;&#1077; &#1089;&#1072;&#1084;&#1086;&#1083;&#1077;&#1090;&#1080;&#1082;&#1080;">Papirfly Midtime</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              <li class="nav__item"><a href="#Hjem" class="nav__link active" data-en="Home" data-no="Hjem" data-ru="&#1044;&#1086;&#1084;">Hjem</a></li>
+              <li class="nav__item"><a href="#Om" class="nav__link" data-en="About" data-no="Om" data-ru="&#1054; &#1082;&#1086;&#1085;&#1082;&#1091;&#1088;&#1089;&#1077;">Om</a></li>
+              <li class="nav__item"><a href="#Info" class="nav__link" data-en="Info" data-no="Info" data-ru="&#1048;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103;">Info</a></li>
+              <li class="nav__item"><a href="#Bilder" class="nav__link" data-en="Photos" data-no="Bilder" data-ru="&#1050;&#1072;&#1088;&#1090;&#1080;&#1085;&#1082;&#1080;">Bilder</a></li>
+              <li class="nav__item"><a href="#Delta" class="nav__link" data-en="Join" data-no="Delta" data-ru="&#1059;&#1095;&#1072;&#1089;&#1090;&#1074;&#1091;&#1081;&#1090;&#1077; &#1089;">Delta</a></li>
+              <div class="language-dropdown">
+                  <a id="toggleLanguage" data-en="Select Language" data-no="Velg Spr&#229;k" data-ru="&#1042;&#1099;&#1073;&#1077;&#1088;&#1080;&#1090;&#1077; &#1074;&#1072;&#1096; &#1103;&#1079;&#1099;&#1082;">Velg Spr&#229;k</a>
+                  <ul id="languageMenu" class="language-menu">
+                    <li data-lang="en">English</li>
+                    <li class="onn" data-lang="no">Norwegian</li>
+                  </ul>
+                </div>
+          </ul>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+      </div>
+  </nav>
+</header>
+<section class="home bd-grid" id="Hjem">
+    <div class="home__data">
+    <h1 class="home__title">Hei,<br>og <span class="home__title-color">Velkommen til</span><br> <span id="typing-text"></span> <span class="cursor"></span></h1>
+
+        <a href="#Delta" class="button" data-no="Delta &#9992;" data-en="Join &#9992;" data-ru="???????????">Delta</a>
+ 
+    </div>
+	
+  <div class="home__social">
+  </div>
+
+  <div class="home__img">
+    <iframe src='https://my.spline.design/rocket-aae7cc78e76cdda86baa74af5cb1a008/' frameborder='0' width='100%' height='500px' ></iframe>
+</div>
+</section>
+<section class="about section" id="Om">
+  <h2 class="section-title" data-no="Om Event &#9992;" data-en="About The Event &#9992;" data-ru="? ???????????">Om Event</h2>
+  <div class="about__container bd-grid">
+      <div class="about__img">
+          <img src="data:image/jpeg;base64,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" alt="">
+      </div>
+      
+      <div>
+          <h2 class="about__subtitle" data-no="Papirfly Event" data-en="Paper-plane Event" data-ru="??????? �???????? ?????????�">Papirfly Event</h2>
+          <p class="about__text"
+          data-en="We invite everyone to a fun paper airplane competition at Hamar Katedralskole! Join us on September 19, 2023 at 11:25 a.m. at the main entrance steps outside to participate in our special paper airplane event. Bring your most creative paper airplane ideas and let's have fun together!"
+          data-ru="?????????? ???? ?? ??????? ??????? ???????? ??????????? ? ????????? ???????????? ?????! ??????????????? ? ??? 19 ???????? 2023 ???? ? 11:25 ? ???????? ????? ?? ?????, ????? ??????? ??????? ? ????? ??????????? ???????????, ??????????? ???????? ???????????. ??????????? ???? ????? ?????????? ???? ???????? ???????????, ? ??????? ??????????? ??????!" 
+          data-no="Vi inviterer alle til en morsom papirflykonkurranse ved Hamar Katedralskole! Bli med oss den 19. september 2023 klokken 11:25 ved hovedinngangstrappen utend&#248;rs for &#229; delta i v&#229;r spesielle papirflyevent. Ta med deg dine mest kreative papirfly ider og la oss ha det g&#248;y sammen!">Vi inviterer alle til en morsom papirflykonkurranse ved Hamar Katedralskole! Bli med oss den 19. september 2023 klokken 11:25 ved hovedinngangstrappen utend&#248;rs for &#229; delta i v&#229;r spesielle papirflyevent. Ta med deg dine mest kreative papirfly ider og la oss ha det g&#248;y sammen! <br><br><p data-no="Vi gleder oss til &#229; se deg der" data-en="We look forward to seeing you there" data-ru="?? ? ??????????? ???? ??????? ? ????">Vi gleder oss til &#229; se deg der</p></p>        </div>                                   
+  </div>
+</section>
+<section class="about section" id="Info">
+  <h2 class="section-title" data-no="Info &#9992;" data-en="Info &#9992;" data-ru="??????????">Info</h2>
+  <p class="section-description" data-en="Get the triple pleasure from our competition! Our program includes an exciting competition of paper airplanes. Read more about the competitions here. Join us and win great prizes!" data-ru="???????? ??????? ???????????? ?? ????? ????????????! ? ???? ????????? ?????? ????????????? ??????? ???????? ???????????. ????????? ? ????????? ??????? ?????. ??????????????? ? ??? ? ??????????? ???????? ?????!" data-no="Opplev trippel moro med v&#229;re konkurranser! Inkludert i v&#229;r lineup er en spennende papirflykonkurranse. Les mer om konkurransene her. Bli med oss og vinn flotte premier!">Opplev trippel moro med v&#229;re konkurranser! Inkludert i v&#229;r lineup er en spennende papirflykonkurranse. Les mer om konkurransene her. Bli med oss og vinn flotte premier!</p>
+
+  <div class="work__container bd-grid">
+      <a>
+          <img src="poster1.jpg" alt="">
+          <h2 class="work__text-p" data-no="Langdistansekast" data-en="Long Distance Throw" data-ru="?????? ?? ??????? ?????????">Langdistansekast</h2>
+          <p class="work__text-p" data-en="In this competition, participants will receive a single sheet of paper of the same size and weight. Each contestant has 10 minutes to fold and prepare their paper airplane before throwing. After the 10 minutes, it's time to throw the paper airplane as far as possible. Each competitor gets three attempts and the longest throw counts as their score." data-no="I denne konkurransen vil deltakerne motta et enkelt ark med papir av samme st&#248;rrelse og vekt. Hver deltaker har 10 minutter til &#229; brette og forberede sitt papirfly f&#248;r kast. Etter de 10 minuttene, er det p&#229; tide &#229; kaste papirflyet s&#229; langt som mulig. Hvert deltaker f&#229;r tre fors&#248;k, og det lengste kastet regnes som poengsummen deres." data-ru="? ???? ???????? ????????? ??????? ???? ???? ?????? ??????????? ??????? ? ????. ? ??????? ????????? ???? 10 ?????, ????? ??????? ? ??????????? ???????? ????????? ????? ???????. ?? ?????????? 10 ????? ?????? ????? ??????? ???????? ????????? ??? ????? ??????. ??????? ????????? ??????????????? ??? ???????, ? ????? ??????? ?????? ????????????? ? ????.">I denne konkurransen vil deltakerne motta et enkelt ark med papir av samme st&#248;rrelse og vekt. Hver deltaker har 10 minutter til &#229; brette og forberede sitt papirfly f&#248;r kast. Etter de 10 minuttene, er det p&#229; tide &#229; kaste papirflyet s&#229; langt som mulig. Hvert deltaker f&#229;r tre fors&#248;k, og det lengste kastet regnes som poengsummen deres.</p></p>                                           
+      
+      </a>
+      <a>
+          <img src="poster2.jpg" alt="">
+          <h2 class="work__text-p" data-no="Hengetid Mesterskap" data-en="Hangtime Championship" data-ru="????????? ?????????" >Hangtime Mesterskap</h2>
+          <p class="work__text-p" data-no="I denne konkurransen vil deltakerne ogs&#229; motta et enkelt ark med papir av samme st&#248;rrelse og vekt. De har 10 minutter til &#229; brette og forberede sitt papirfly f&#248;r de g&#229;r til startlinjen. Etter de 10 minuttene, kaster deltakerne sine papirfly i luften, og et tidtakerapparat m&#229;ler hvor lenge hvert papirfly er i luften f&#248;r det treffer bakken. Det papirflyet som har lengst flytid, vinner konkurransen." data-en="In this competition, participants will also receive a single sheet of paper of the same size and weight. They have 10 minutes to fold and prepare their paper airplane before going to the starting line. After the 10 minutes, the participants throw their paper airplanes into the air, and a timer measures how long each paper airplane is in the air before it hits the ground. The paper plane with the longest flight time wins the competition." data-ru="? ???? ???????? ????????? ????? ??????? ???? ???? ?????? ??????????? ??????? ? ????. ? ??? ???? 10 ?????, ????? ??????? ? ??????????? ???????? ?????????, ?????? ??? ????? ?? ?????. ?? ????????? 10 ????? ????????? ???????????? ???? ???????? ?????????? ? ??????, ? ?????? ????????, ??? ????? ?????? ???????? ????????? ????????? ? ???????, ?????? ??? ?????? ?? ?????. ???????? ????????? ? ?????????? ???????? ?????? ????????? ? ????????????.">I denne konkurransen vil deltakerne ogs&#229; motta et enkelt ark med papir av samme st&#248;rrelse og vekt. De har 10 minutter til &#229; brette og forberede sitt papirfly f&#248;r de g&#229;r til startlinjen. Etter de 10 minuttene, kaster deltakerne sine papirfly i luften, og et tidtakerapparat m&#229;ler hvor lenge hvert papirfly er i luften f&#248;r det treffer bakken. Det papirflyet som har lengst flytid, vinner konkurransen.</p></p>                                         
+      
+      </a>
+      <a>
+          <img src="poster3.jpg" alt="">
+          <h2 class="work__text-p" data-no="Design og Skj&#248;nnhet" data-en="Design and Beauty" data-ru="?????? ? ???????">Design og Skj&#248;nnhet</h2>
+          <p class="work__text-p" data-no="I denne konkurransen vil deltakerne f&#229; utdelt et ark med papir, og de har 10 minutter til &#229; brette, dekorere og forvandle arket til det mest imponerende og estetisk tiltalende papirflyet de kan tenke seg. Deltakerne er oppfordret til &#229; eksperimentere med forskjellige papirtyper, farger, brettem&#248;nstre og dekorasjoner. En jury vil vurdere hvert papirfly basert p&#229; kreativitet, estetikk og h&#229;ndverk, og tildeler poeng deretter." data-en="In this competition, participants will be given a sheet of paper and have 10 minutes to fold, decorate and transform the sheet into the most impressive and aesthetically pleasing paper airplane they can imagine. Participants are encouraged to experiment with different paper types, colours, folding patterns and decorations. A jury will evaluate each paper airplane based on creativity, aesthetics and craftsmanship, awarding points accordingly." data-ru="? ???? ???????? ?????????? ????? ???????????? ???? ??????, ? ? ??? ????? 10 ?????, ????? ???????, ???????? ? ?????????? ???? ? ????? ???????????? ? ??????????? ??????????????? ???????? ?????????, ??????? ??? ?????? ????? ???? ???????????. ?????????? ???????????? ???????????????????? ? ?????????? ?????? ??????, ???????, ??????? ??????????? ? ???????????. ???? ????? ????????? ?????? ???????? ????????? ? ????? ?????? ????????????, ???????? ? ??????????, ????????? ??????????????? ?????.">I denne konkurransen vil deltakerne f&#229; utdelt et ark med papir, og de har 10 minutter til &#229; brette, dekorere og forvandle arket til det mest imponerende og estetisk tiltalende papirflyet de kan tenke seg. Deltakerne er oppfordret til &#229; eksperimentere med forskjellige papirtyper, farger, brettem&#248;nstre og dekorasjoner. En jury vil vurdere hvert papirfly basert p&#229; kreativitet, estetikk og h&#229;ndverk, og tildeler poeng deretter. </p></p>                                      
+      </a>
+  </div>
+</section>
+<section class="work section" id="Bilder">
+  <h2 class="section-title" data-no="Bilder &#9992;" data-en="Photos &#9992;" data-ru="????">Bilder</h2>
+
+  <div class="work__container bd-grid">
+      <a  class="konkurranse__img">
+          <img src="https://www.nysgjerrigper.no/siteassets/bilder-generelle/gutt-med-papirfly-foto-shutterstock.jpg" alt="">
+      </a>
+      <a class="konkurranse__img">
+          <img src="https://images.bonnier.cloud/files/ill/production/2018/04/29144305/verdens-beste-papirfly.jpg" alt="">
+      </a>
+      <a  class="konkurranse__img">
+          <img src="https://www.nysgjerrigper.no/siteassets/nysgjerrigper-prosjekter/prosjekt-bilder/manga-papirfly.jpg?transform=DownFit&width=1000&hash=d0e2766f25fe714caf8e8c9cc162e290" alt="">
+      </a>
+      <a  class="konkurranse__img">
+          <img src="poster1.jpg" alt="">
+      </a>
+      <a  class="konkurranse__img">
+          <img src="poster2.jpg" alt="">
+      </a>
+      <a  class="konkurranse__img">
+          <img src="poster3.jpg" alt="">
+      </a>
+
+      <div class="popup" id="imagePopup">
+          <span class="close" id="closePopup"></span>
+          <img src="https://g.api.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1666037093000/haar/2022/10/17/22/microsoftteams-image-11.jpg?chk=582BC8" alt="" id="popupImage">
+      </div>
+
+  </div>
+
+</section>
+<section class="contact section" id="Delta">
+  <h2 class="section-title" data-no="Delta &#9992;" data-en="Enroll &#9992;"  data-ru="??????????????????">Delta</h2>
+
+  <div class="contact__container bd-grid">
+        <form action="index.php" method="post" class="contact__form" id="myForm"> 
+            <input class="contact__input-input" id="name" name="name" placeholder="Navn"> 
+	        <input id="email" name="email" placeholder="Epost" class="contact__input-input">
+            <div class="input-container">
+                <span class="custom-placeholder">(+47)</span>
+                <input id="telefon" name="telefon" placeholder="Telefon" class="contact__input">
+            </div>
+            <button type="submit" class="send_button2" onclick="delaySubmit(event)">
+                <span class="default">Send</span>
+                <span class="success">Sent</span>
+                <div class="left"></div>
+                <div class="right"></div>
+            </button>
+      </form>
+      
+  </div>
+</section>
+<footer class="footer">
+  <p class="footer__title"  data-en="Paper-plane-Event &#9992;" data-no="Papirfly-Event &#9992;" data-ru="???????? ?????????-???????">Papirfly-Event</p>
+  <div class="footer__social">
+      <a href="https://www.instagram.com/hamarkatedralskole1153/?hl=en" class="footer__icon"><i class="bx bxl-instagram"></i></a>
+  </div>
+  <p class="footer__copy">&#169; Papirfly-event. All rigths reserved</p>
+</footer>
+</body>
+
+
+<script>
+document.querySelectorAll('.send_button2').forEach(button => { let getVar = variable => getComputedStyle(button).getPropertyValue(variable);
+
+    button.addEventListener('click', e => {
+
+        if(!button.classList.contains('active_sendbutton')) {
+
+            button.classList.add('active_sendbutton');
+
+            gsap.to(button, {
+                keyframes: [{
+                    '--left-wing-first-x': 50,
+                    '--left-wing-first-y': 100,
+                    '--right-wing-second-x': 50,
+                    '--right-wing-second-y': 100,
+                    duration: .2,
+                    onComplete() {
+                        gsap.set(button, {
+                            '--left-wing-first-y': 0,
+                            '--left-wing-second-x': 40,
+                            '--left-wing-second-y': 100,
+                            '--left-wing-third-x': 0,
+                            '--left-wing-third-y': 100,
+                            '--left-body-third-x': 40,
+                            '--right-wing-first-x': 50,
+                            '--right-wing-first-y': 0,
+                            '--right-wing-second-x': 60,
+                            '--right-wing-second-y': 100,
+                            '--right-wing-third-x': 100,
+                            '--right-wing-third-y': 100,
+                            '--right-body-third-x': 60
+                        })
+                    }
+                }, {
+                    '--left-wing-third-x': 20,
+                    '--left-wing-third-y': 90,
+                    '--left-wing-second-y': 90,
+                    '--left-body-third-y': 90,
+                    '--right-wing-third-x': 80,
+                    '--right-wing-third-y': 90,
+                    '--right-body-third-y': 90,
+                    '--right-wing-second-y': 90,
+                    duration: .2
+                }, {
+                    '--rotate': 50,
+                    '--left-wing-third-y': 95,
+                    '--left-wing-third-x': 27,
+                    '--right-body-third-x': 45,
+                    '--right-wing-second-x': 45,
+                    '--right-wing-third-x': 60,
+                    '--right-wing-third-y': 83,
+                    duration: .25
+                }, {
+                    '--rotate': 55,
+                    '--plane-x': -8,
+                    '--plane-y': 24,
+                    duration: .2
+                }, {
+                    '--rotate': 40,
+                    '--plane-x': 45,
+                    '--plane-y': -180,
+                    '--plane-opacity': 0,
+                    duration: .3,
+                    onComplete() {
+                        setTimeout(() => {
+                            button.removeAttribute('style');
+                            gsap.fromTo(button, {
+                                opacity: 0,
+                                y: -8
+                            }, {
+                                opacity: 1,
+                                y: 0,
+                                clearProps: true,
+                                duration: .3,
+                                onComplete() {
+                                    button.classList.remove('active_sendbutton');
+                                }
+                            })
+                        }, 2000)
+                    }
+                }]
+            })
+
+            gsap.to(button, {
+                keyframes: [{
+                    '--text-opacity': 0,
+                    '--border-radius': 0,
+                    '--left-wing-background': getVar('--primary-darkest'),
+                    '--right-wing-background': getVar('--primary-darkest'),
+                    duration: .1
+                }, {
+                    '--left-wing-background': getVar('--primary'),
+                    '--right-wing-background': getVar('--primary'),
+                    duration: .1
+                }, {
+                    '--left-body-background': getVar('--primary-dark'),
+                    '--right-body-background': getVar('--primary-darkest'),
+                    duration: .4
+                }, {
+                    '--success-opacity': 1,
+                    '--success-scale': 1,
+                    duration: .25,
+                    delay: .25
+                }]
+            })
+
+        }
+
+    })
+
+});
+
+function delaySubmit(event) {
+    event.preventDefault(); 
+    
+    document.querySelector(".send_button2").disabled = true;
+
+    setTimeout(function () {
+        document.querySelector("#myForm").submit(); 
+    }, 4000); 
+}
+        const navItems = document.querySelectorAll('.nav__link');
+
+function removeActiveClass() {
+    navItems.forEach(item => {
+        item.classList.remove('active');
+    });
+}
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        removeActiveClass();
+
+        item.classList.add('active');
+    });
+});
+
+const toggleLanguageButton = document.getElementById('toggleLanguage');
+const languageMenu = document.getElementById('languageMenu');
+const elementsToTranslate = document.querySelectorAll('[data-en], [data-no], [data-ru]');
+
+let activeLang = 'no'; 
+
+function hideElementsForAllLanguages() {
+  elementsToTranslate.forEach((element) => {
+    element.style.display = 'none';
+  });
+}
+
+function displayElementsForLanguage(lang) {
+  elementsToTranslate.forEach((element) => {
+    const dataAttr = `data-${lang}`;
+    const translation = element.getAttribute(dataAttr);
+    if (translation !== null) {
+      element.style.display = 'block';
+      element.textContent = translation;
+    }
+  });
+}
+
+toggleLanguageButton.addEventListener('click', () => {
+  languageMenu.classList.toggle('show');
+});
+
+// Handle language menu item click
+languageMenu.addEventListener('click', (e) => {
+  if (e.target.tagName === 'LI') {
+    const selectedLang = e.target.getAttribute('data-lang');
+    
+    // Hide all elements with language-specific data attributes
+    hideElementsForAllLanguages();
+
+    // Display elements for the selected language
+    displayElementsForLanguage(selectedLang);
+
+    activeLang = selectedLang; // Update the active language
+
+    // Close the language menu
+    languageMenu.classList.remove('show');
+
+    // Update active class for menu items
+    updateActiveClass();
+  }
+});
+
+// Function to update the active class for menu items
+function updateActiveClass() {
+  const menuItems = languageMenu.querySelectorAll('li');
+  menuItems.forEach((item) => {
+    const lang = item.getAttribute('data-lang');
+    if (lang === activeLang) {
+      item.classList.add('onn');
+    } else {
+      item.classList.remove('onn');
+    }
+  });
+}
+
+displayElementsForLanguage(activeLang);
+
+const imageLinks = document.querySelectorAll('.konkurranse__img');
+const imagePopup = document.getElementById('imagePopup');
+const popupImage = document.getElementById('popupImage');
+const closePopup = document.getElementById('closePopup');
+
+imageLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const imgSrc = link.querySelector('img').getAttribute('src'); 
+        popupImage.setAttribute('src', imgSrc);
+        imagePopup.style.display = 'block';
+
+        const header = document.getElementById('header');
+        header.style.display = 'none';
+
+        document.body.classList.add('popup-open');
+    });
+});
+
+closePopup.addEventListener('click', () => {
+    closeImagePopup();
+
+    const header = document.getElementById('header');
+    header.style.display = 'block';
+
+    document.body.classList.remove('popup-open');
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === imagePopup || e.target === closePopup) {
+        closeImagePopup();
+
+        const header = document.getElementById('header');
+        header.style.display = 'block';
+
+        document.body.classList.remove('popup-open');
+    }
+});
+
+function closeImagePopup() {
+    imagePopup.style.display = 'none';
+    popupImage.setAttribute('src', ''); 
+}      
+
+         setTimeout(function () {
+            document.querySelector(".loader").classList.add("hidden");
+        }, 1250); 
+
+         document.addEventListener("DOMContentLoaded", function () {
+             const typingText = document.getElementById("typing-text");
+            const cursor = document.querySelector(".cursor");
+            const texts = ["Papirfly", "Paper Plane", "Avion en papier", "Papirflugzeug", "Avi\u00f3n de papel", "\u0411\u0443\u043c\u0430\u0436\u043d\u044b\u0439\u0020\u0441\u0430\u043c\u043e\u043b\u0451\u0442\u0438\u043a", "\u7d19\u98db\u884c\u6a5f", "\u0070\u0061\u0070\u0069\u0072\u00fc\u0073\u0020\u0073\u0069\u006e\u0065\u011f\u0069"];
+
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;            
+
+            function typeText() {
+                const currentText = texts[textIndex];
+
+                if (isDeleting) {
+                    typingText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        textIndex = (textIndex + 1) % texts.length;
+                    }
+                } else {
+                    typingText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+
+                    if (charIndex === currentText.length) {
+                        isDeleting = true;
+                    }
+                }
+
+                const speed = isDeleting ? 75 : 200; 
+                setTimeout(typeText, speed);
+            }
+
+            typeText();
+
+            });
+    </script>
